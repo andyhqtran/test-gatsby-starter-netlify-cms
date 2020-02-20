@@ -7,6 +7,17 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
+CMS.init({
+  config: {
+    backend: {
+      name: 'git-gateway',
+      branch: 'master',
+    },
+    media_folder: 'static/img',
+    public_folder: '/img',
+  },
+});
+
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 

@@ -15,6 +15,27 @@ CMS.init({
     },
     media_folder: 'static/img',
     public_folder: '/img',
+    collections: [
+      {
+        name: 'blog',
+        label: 'blog',
+        folder: 'src/pages/blog',
+        create: true,
+        fields: [
+          {
+            label: 'Template key',
+            name: 'templateKey',
+            widget: 'hidden',
+            default: 'blog-post',
+          },
+          {
+            label: 'title',
+            name: 'title',
+            widget: 'string',
+          },
+        ],
+      },
+    ],
   },
 });
 
